@@ -9,12 +9,12 @@ loophead:
 	inc rcx					;increment counter
 	mov al, byte[rdi+rcx]	;move in rax s1[rcx]
 	mov r8b, byte[rsi+rcx]	;move in r8 s2[rcx]
-	cmp rax, 0				;check end of s1
+	cmp al, 0				;check end of s1
 	je finish
-	cmp r8, 0				;check end of s2
+	cmp r8b, 0				;check end of s2
 	je finish
-	cmp rax, r8				;compare s1[rcx] s2[rcx]
+	cmp al, r8b				;compare s1[rcx] s2[rcx]
 	je loophead
 finish:
-	sub rax, r8				; store return in rax
+	sub al, r8b				; store return in rax
 	ret
