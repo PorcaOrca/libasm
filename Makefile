@@ -6,13 +6,14 @@
 #    By: lodovico <lodovico@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/27 12:37:36 by lodovico          #+#    #+#              #
-#    Updated: 2021/04/27 16:12:15 by lodovico         ###   ########.fr        #
+#    Updated: 2021/04/28 11:04:06 by lodovico         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # to make it work for mac os change flags from elf to macho and add underscore in the sources definition of the function
 
-SRCS	=	./srcs/ft_strlen.s
+SRCS	=	./srcs/ft_strlen.s\
+			./srcs/ft_strcmp.s
 
 NA		=	nasm
 
