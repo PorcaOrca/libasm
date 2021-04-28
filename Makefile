@@ -6,7 +6,7 @@
 #    By: lodovico <lodovico@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/27 12:37:36 by lodovico          #+#    #+#              #
-#    Updated: 2021/04/28 11:22:20 by lodovico         ###   ########.fr        #
+#    Updated: 2021/04/28 12:50:05 by lodovico         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,8 @@
 
 SRCS	=	./srcs/ft_strlen.s\
 			./srcs/ft_strcmp.s\
-			./srcs/ft_strcpy.s
+			./srcs/ft_strcpy.s\
+			./srcs/ft_write.s
 
 NA		=	nasm
 
@@ -52,7 +53,7 @@ re		:	fclean $(NAME)
 
 test	:	re
 			@echo "\033[0;33mCompiling test program..."
-			@gcc -Wall -Wextra -Werror ./main.c $(NAME) -o test
+			@gcc ./main.c $(NAME) -o test
 			@echo "\033[0m"
 			@echo "\033[0;33mrunning test program"
 			@echo "\033[0m"

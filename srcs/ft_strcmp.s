@@ -1,6 +1,5 @@
-section .data
+global ft_strcmp
 section .text
-	global ft_strcmp
 ft_strcmp:
 	mov rcx, -1		; init counter
 	xor rax, rax	; zeroed rax

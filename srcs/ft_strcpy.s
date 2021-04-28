@@ -1,6 +1,5 @@
-segment .data
+global ft_strcpy
 segment .text
-	global ft_strcpy
 ft_strcpy:
 	mov rcx, -1
 	xor r8, r8
