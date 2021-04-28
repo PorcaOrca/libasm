@@ -6,13 +6,14 @@
 /*   By: lodovico <lodovico@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/27 13:12:18 by lodovico          #+#    #+#             */
-/*   Updated: 2021/04/28 12:49:15 by lodovico         ###   ########.fr       */
+/*   Updated: 2021/04/28 13:15:11 by lodovico         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+#include <errno.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
