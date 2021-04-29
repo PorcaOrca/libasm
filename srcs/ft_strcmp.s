@@ -15,5 +15,5 @@ loophead:
 	cmp al, r8b				;compare s1[rcx] s2[rcx]
 	je loophead
 finish:
-	sub al, r8b				; store return in rax
+	sub rax, r8				; store return in rax
 	ret

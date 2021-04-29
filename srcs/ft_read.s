@@ -3,7 +3,7 @@ global ft_read
 section .text
 ft_read:
 				; int ft_read(int rdi, void* rsi, size_t rdx);
-	mov rax 0	;syscall read different in MACOS
+	mov rax, 0	;syscall read different in MACOS
 	syscall
 	cmp rax, 0
 	jl set_error

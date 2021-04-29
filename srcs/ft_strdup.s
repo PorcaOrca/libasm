@@ -7,6 +7,7 @@ ft_strdup:
 	call ft_strlen 		;find len of argument
 	push rdi			;push rdi to stack
 	mov rdi, rax		;put len into 1 arg
+	inc rdi
 	call malloc	wrt ..plt		;allocate len memory
 	cmp rax, 0			;control on malloc
 	je set_error		;error found

@@ -7,4 +7,5 @@ loop:
 			mov cl, byte [rdi+rax]	; cl = str[rax]
 			cmp cl, 0				; find EOS
 			jne loop				; if is zero flag not 1 loop
+finish:
 			ret

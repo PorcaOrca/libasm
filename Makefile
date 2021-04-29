@@ -6,7 +6,7 @@
 #    By: lodovico <lodovico@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/27 12:37:36 by lodovico          #+#    #+#              #
-#    Updated: 2021/04/28 12:50:05 by lodovico         ###   ########.fr        #
+#    Updated: 2021/04/29 13:19:33 by lodovico         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,9 @@
 SRCS	=	./srcs/ft_strlen.s\
 			./srcs/ft_strcmp.s\
 			./srcs/ft_strcpy.s\
-			./srcs/ft_write.s
+			./srcs/ft_write.s\
+			./srcs/ft_read.s\
+			./srcs/ft_strdup.s
 
 NA		=	nasm
 
@@ -26,9 +28,7 @@ FLAGS	=	-f elf64
 NAME	=	libasm.a
 
 %.o		:	%.s
-			@echo "\033[0;33mCreating objects..."
 			@$(NA) $(FLAGS) $<
-			@echo "\033[0m"
 
 all		:	$(NAME)
 
@@ -51,13 +51,16 @@ fclean	:	clean
 
 re		:	fclean $(NAME)
 
-test	:	re
+test	:	re delete
 			@echo "\033[0;33mCompiling test program..."
 			@gcc ./main.c $(NAME) -o test
 			@echo "\033[0m"
-			@echo "\033[0;33mrunning test program"
+			@echo "\033[0;33mRUNNIG TEST PROGRAM"
 			@echo "\033[0m"
 			@./test
-			@echo "\033[0m"
+			@chmod 775 it_s_my_file this_is_the_file
+
+delete	:
+			@rm -rf this_is_the_file it_s_my_file
 			
-.PHONY	:	all clean fclean re
+.PHONY	:	all clean fclean re test delete
