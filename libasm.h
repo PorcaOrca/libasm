@@ -6,7 +6,7 @@
 /*   By: lodovico <lodovico@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/27 13:12:18 by lodovico          #+#    #+#             */
-/*   Updated: 2021/04/29 13:39:29 by lodovico         ###   ########.fr       */
+/*   Updated: 2021/05/03 11:04:04 by lodovico         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,13 @@
 #include <unistd.h>
 #include <string.h>
 #include <fcntl.h>
+
+typedef struct		s_list
+{
+	void			*data;
+	struct s_list	*next;
+}					t_list;
+
 
 size_t		ft_strlen(const char *s);
 int			ft_strcmp(const char *s1, const char *s2);
